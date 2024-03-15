@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply bg-slate-600 text-white text-lg font-bold;
-  }
+body {
+  background: #121212;
 }
