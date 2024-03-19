@@ -1,10 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import FlexExamples from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <FlexExamples></FlexExamples>
     </>
   );
 }

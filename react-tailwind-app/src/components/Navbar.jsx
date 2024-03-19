@@ -1,34 +1,65 @@
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-export default function Navbar() {
-  const [nav, setNav] = useState(false);
-
+export default function FlexExamples() {
   return (
-    <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-      <h1 className="flex w-full text-3xl font-bold text-[#00df98] ">REACT.</h1>
-      <ul className="flex hidden">
-        <li className="p-4">Home</li>
-        <li className="p-4">Company</li>
-        <li className="p-4">Resources</li>
-        <li className="p-4">About</li>
-        <li className="p-4">Contact</li>
-      </ul>
-      <div>
-        <AiOutlineMenu size={20} />
+    <>
+      {/* FLEX BASIS */}
+      <div className="flex flex-row font-extrabold text-3xl text-slate-800 justify-center">
+        Flex Basis
       </div>
-      <div className="fixed left-0 top-0 w-ª[60%] h-full border-r border-r-gray-900 bg-[#121212]">
-        <h1 className="flex w-full text-3xl font-bold text-[#00df98] m-4">
-          REACT.
-        </h1>
-        <ul className="uppercase p-4 ">
-          <li className="p-4 border-gray-600">Home</li>
-          <li className="p-4 border-gray-600">Company</li>
-          <li className="p-4 border-gray-600">Resources</li>
-          <li className="p-4 border-gray-600">About</li>
-          <li className="p-4 border-gray-600">Contact</li>
-        </ul>
+      <div class="flex flex-row">
+        <div class="basis-1/4 hover:basis-1/2 hover:bg-blue-200 bg-blue-500 p-4 m-0 rounded-md">
+          01
+        </div>
+        <div class="basis-1/4 bg-blue-400 p-2 m-0 rounded-md">02</div>
+        <div class="basis-1/2 bg-blue-300 p-0 m-1 rounded-md">03</div>
       </div>
-    </div>
+
+      {/* FLEX REVERSE */}
+      <div className="flex flex-row font-extrabold text-3xl text-slate-800 justify-center">
+        Flex Reverse
+      </div>
+      <div class="flex flex-row-reverse">
+        <div class="hover:w-1/4 hover:bg-blue-200 bg-blue-500 p-4 m-0 rounded-md">
+          01
+        </div>
+        <div class="bg-blue-400 p-2 m-0 rounded-md">02</div>
+        <div class="bg-blue-300 p-0 m-1 rounded-md">03</div>
+      </div>
+
+      {/* FLEX ROW -> FLEX COL */}
+      <div className="flex flex-row font-extrabold text-3xl text-slate-800 justify-center">
+        Flex Row to Flex Col
+      </div>
+      <div className="flex flex-row md:flex-col">
+        <div class="hover:bg-blue-200 bg-blue-500 p-4 m-0 rounded-md ">01</div>
+        <div class="bg-blue-400 p-2 m-0 rounded-md">02</div>
+        <div class="bg-blue-300 p-0 m-1 rounded-md">03</div>
+      </div>
+
+      {/* FLEX NOWRAP */}
+      <div className="flex flex-row font-extrabold text-3xl text-slate-800 justify-center">
+        Flex No Wrap
+      </div>
+      <div className="flex flex-nowrap">
+        <div class="hover:bg-blue-200 bg-blue-500 p-4 m-0 rounded-md w-[1000px] ">
+          01
+        </div>
+        <div class="bg-blue-400 p-2 m-0 rounded-md w-[2000px] ">02</div>
+        <div class="bg-blue-300 p-0 m-1 rounded-md w-[1000px]">03</div>
+      </div>
+
+      {/* FLEX WRAP */}
+      <div className="flex flex-row font-extrabold text-3xl text-slate-800 justify-center">
+        Flex Wrap
+      </div>
+      <div className="flex flex-wrap">
+        <div class="hover:bg-blue-200 bg-blue-500 p-4 m-0 rounded-md w-[550px] ">
+          01
+        </div>
+        <div class="bg-blue-400 p-2 m-0 rounded-md w-[1250px] ">02</div>
+        <div class="bg-blue-300 p-0 m-1 rounded-md w-[800px]">03</div>
+      </div>
+    </>
   );
 }
